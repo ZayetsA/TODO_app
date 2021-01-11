@@ -1,1 +1,2 @@
-"# TODO_app" 
+Simple TODO_app, made with Django
+
