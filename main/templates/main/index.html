@@ -1,0 +1,21 @@
+{%extends 'main/base.html'%}
+
+{%block title%}
+Main
+{%endblock%}
+
+{%block content%}
+<h1>Main</h1>
+{%if tasks%}
+{% for task in tasks %}
+<div class="alert alert-warning mt-2">
+    <h3>{{task.title}}</h3>
+    <p>{{task.task}}</p>
+</div>
+{%endfor%}
+{%else %}
+<p>No records</p>
+{%endif%}
+{%endblock%}
+
+
