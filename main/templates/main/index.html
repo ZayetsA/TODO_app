@@ -11,7 +11,14 @@ Main
 <div class="alert alert-warning mt-2">
     <h3>{{task.title}}</h3>
     <p>{{task.task}}</p>
-    <td><a href="delete/{{task.id}}">Удалить</a></td>
+    <td><a class="href_delete" href="delete/{{task.id}}" style="
+	border:1px solid #ccc; /*рамка*/
+	border-radius: 5px;
+	background:#C82333; /*фон*/
+	padding: 5px 5px; /*отступы внутри*/
+	text-decoration: none;
+    color: #F8E4E6;
+">Удалить</a></td>
 </div>
 {%endfor%}
 {%else %}
