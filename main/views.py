@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
@@ -29,3 +30,12 @@ def create(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+
+def delete(request, id):
+    try:
+        person = Task.objects.get(id=id)
+        person.delete()
+        return HttpResponseRedirect("/")
+    except Task.DoesNotExist:
+        return HttpResponseNotFound("<h2>Person not found</h2>")

@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Task(models.Model):
+    DoesNotExist = None
     objects = None
     title = models.CharField('Name', max_length=30)
     task = models.TextField('Description')
